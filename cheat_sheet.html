@@ -1,0 +1,85 @@
+/*Sources*/
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var
+https://www.tutorialspoint.com/javascript/javascript_variables.htm
+
+
+/*Link an js-file to you page. This is set in between head*/
+<script src="scripts/main.js"></script>
+
+/*Variables*/
+JavaScript allows you to work with three primitive data types −
+> Numbers, eg. 123, 120.50 etc.
+> Strings of text e.g. "This text string" etc.
+> Boolean e.g. true or false.
+
+The scope of a variable is the region of your program in which it is defined. JavaScript variables have only two scopes.
+> Global Variables − A global variable has global scope which means it can be defined anywhere in your JavaScript code.
+> Local Variables − A local variable will be visible only within a function where it is defined. Function parameters are always local to that function.
+
+/*Data types*/
+var length = 16;                               // Number
+var lastName = "Johnson";                      // String
+var cars = ["Saab", "Volvo", "BMW"];           // Array
+var x = {firstName:"John", lastName:"Doe"};    // Object
+var x = true; (or false)                       // Boolians
+
+typeof returns the type of the variable
+typeof "John"                // Returns "string"
+typeof 3.14                  // Returns "number"
+typeof false                 // Returns "boolean"
+typeof [1,2,3,4]             // Returns "object" (not "array", see note below)
+typeof {name:'John', age:34} // Returns "object"
+
+You can change the datatype of a variable by assiging a value to it:
+var x;               // Now x is undefined
+var x = 5;           // Now x is a Number
+var x = "John";      // Now x is a String
+
+
+/*Debugging*/
+If your browser supports debugging, you can use console.log() to display JavaScript values in the debugger window:
+console.log([value])
+
+alert
+alert([value]);
+
+Breakpoint: The debugger keyword stops the execution of JavaScript, and calls (if available) the debugging function.
+
+======================================
+Chrome
+------------------
+Open the browser.
+From the menu, select tools.
+From tools, choose developer tools.
+Finally, select Console.
+
+Internet Explorer
+------------------
+Open the browser.
+From the menu, select tools.
+From tools, choose developer tools.
+Finally, select Console.
+======================================
+
+
+/*Best practices*/
+
+- Declarations on Top
+- It is a good coding practice to initialize variables when you declare them
+- Always treat numbers, strings, or booleans as primitive values. Not as objects.
+- Beware of Automatic Type Conversions
+
+Don't Use new Object()
+> Use {} instead of new Object()
+> Use "" instead of new String()
+> Use 0 instead of new Number()
+> Use false instead of new Boolean()
+> Use [] instead of new Array()
+> Use /()/ instead of new RegExp()
+> Use function (){} instead of new Function()
+
+The == comparison operator always converts (to matching types) before comparison.
+The === operator forces comparison of values and type:
+
+
+End Your Switches with Defaults
