@@ -63,7 +63,7 @@ function array_2d (amount_result)
   }
 }
 
-function checkvalue(value_defined, value_entered, id_response)
+function checkvalue(value_defined, value_entered)
 {
 
   if (Number(document.getElementById(value_entered).value) >= Number(document.getElementById(value_defined).value)) {
@@ -76,6 +76,31 @@ function checkvalue(value_defined, value_entered, id_response)
   }
 
 }
+
+function checkvalue_str(value_defined, value_entered, id_response)
+{
+
+  if (isNaN(document.getElementById(value_defined).value) && isNaN(document.getElementById(value_entered).value))
+  {
+    display_in_log("Value entered OK");
+
+    if (document.getElementById(value_defined).value === document.getElementById(value_entered).value)
+    {
+      document.getElementById(id_response).innerHTML = "Result: OKE, the values are the same";
+    }
+    else
+    {
+      document.getElementById(id_response).innerHTML = "Result: ERROR, the values are not the same. Please check";
+    }
+  }
+  else
+  {
+    display_in_log("Value is not string");
+    document.getElementById(id_response).innerHTML = "Result: ERROR, one of the boxes is not a string value. Please check";
+  }
+
+}
+
 
 function calc (value1, value2, operator, outcome)
 {
