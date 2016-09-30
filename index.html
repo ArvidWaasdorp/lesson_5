@@ -8,50 +8,46 @@
   </head>
   <body>
 
-<!--
+    <h1>Assigment 5</h1>
 
-1. Create a "cheat sheet" JavaScript file that contains working examples with comments of:
-
-- Variables
-- Debugging (alerts, comments, the console)
-- Different data types
-- Arrays
-- Testing
-- Logic
-
-v2. Create a script with two variables assigned to two numbers. Add them together and output the result to the console. Now do the same with two strings.
-v3. Create a multidimensional array related to a subject that interests you. Output two of the items in sub-arrays to the console.
-v4. Write a script that checks if a variable is less than 10. If it is, alert the user that their variable is less than 10. If it is not, using the console, let the user know that what the variable was and that it was greater than 10.
-5. Try running the script and then changing the variable's value to see how this affects the program's output.
-6. Write a similar program to check if a string stored in a variable is the same as another string.
-7. Declare a function that takes a name as an argument and tells the user what name they've entered. Try running it after it has been declared.
-8. Declare a function that takes no arguments but prints something to the console. Try running it after it has been declared.
-9. Declare a function that depending upon which virtual 'door' was entered tells the user they've received a different 'prize' in an alert. After declaring the function, try running it with different options.
-
--->
     <div class="wrapper">
-
       <div class="col_400">
-        <h1 class="col_header">1) Create a script with two variables assigned to two numbers. Add them together and output the result to the console. Now do the same with two strings</h1>
         <p>
-          Add 2 + 2. Result = 4
-          <br><span class="js_link" onclick="javascript:add_simple_int();">Start script</span>
+          I have put all tasks in the same page. You can trigger each task by pressing on the link "Run script".
+          <br>Some of the examples push the output to the console (debugger). You can open the console of Chrome using the following key-combinations:
         </p>
         <p>
-          Add "Hello " + "world!". Result = "Hello world!"
-          <br><span class="js_link" onclick="javascript:add_simple_str();">Start script</span>
+          Internet Explorer: <kbd>F12</kbd>
+        </p>
+        <p>
+          Chome Windows: <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>I</kbd>
+        </p>
+        <p>
+          Chome Mac: <kbd>&#8997;</kbd>+<kbd>&#8984;</kbd>+<kbd>I</kbd>
         </p>
       </div>
 
       <div class="col_400">
-        <h1 class="col_header">2) Create a multidimensional array related to a subject that interests you. Output two of the items in sub-arrays to the console.</h1>
+        <h2 class="col_header">1) Create a script with two variables assigned to two numbers. Add them together and output the result to the console. Now do the same with two strings</h2>
+        <p>
+          Add 2 + 2. Result = 4
+          <br><span class="js_link" onclick="javascript:add_simple_int();">Run script</span>
+        </p>
+        <p>
+          Add "Hello " + "world!". Result = "Hello world!"
+          <br><span class="js_link" onclick="javascript:add_simple_str();">Run script</span>
+        </p>
+      </div>
+
+      <div class="col_400">
+        <h2 class="col_header">2) Create a multidimensional array related to a subject that interests you. Output two of the items in sub-arrays to the console.</h2>
         <p>
           <span class="js_link" onclick="javascript:array_2d(2);">Run script</span>
         </p>
       </div>
 
       <div class="col_400">
-        <h1 class="col_header">3) Write a script that checks if a variable is less than 10. If it is, alert the user that their variable is less than 10. If it is not, using the console, let the user know that what the variable was and that it was greater than 10.</h1>
+        <h2 class="col_header">3) Write a script that checks if a variable is less than 10. If it is, alert the user that their variable is less than 10. If it is not, using the console, let the user know that what the variable was and that it was greater than 10.</h2>
         <p>
           Default value: <input type="input" id="value_defined" class="right" value="10">
           <br><br>Enter value: <input type="input" class="right" id="value_to_check">
@@ -62,7 +58,7 @@ v4. Write a script that checks if a variable is less than 10. If it is, alert th
       </div>
 
       <div class="col_400">
-        <h1 class="col_header">4) Try running the script and then changing the variable's value to see how this affects the program's output.</h1>
+        <h2 class="col_header">4) Try running the script and then changing the variable's value to see how this affects the program's output.</h2>
         <p>
           <input type="input" id="value1" value="10" class="calc">
           <select id="operator">
@@ -71,46 +67,61 @@ v4. Write a script that checks if a variable is less than 10. If it is, alert th
             <option value="-">-</option>
             <option value="/">/</option>
           </select>
-          <input type="input" value="10" class="calc" id="value2"> =
-          <input type="input" id="outcome" class="calc">
+          <input type="input" id="value2" value="10" class="calc"> =
+          <input type="input" id="outcome" class="calc_outcome">
         </p>
         <p>
-          <span class="js_link" onclick="javascript:calc('value1', 'value1', 'operator', 'outcome');">Run script</span>
+          <span class="js_link" onclick="javascript:calc('value1', 'value2', 'operator', 'outcome');">Run script</span>
         </p>
       </div>
 
-
       <div class="col_400">
-        <h1 class="col_header">5) Write a similar program to check if a string stored in a variable is the same as another string.</h1>
+        <h2 class="col_header">5) Write a similar program to check if a string stored in a variable is the same as another string.</h2>
         <p>
           Default value: <input type="input" id="value_defined_5" class="right" value="text">
           <br><br>Enter value: <input type="input" class="right" id="value_to_check_5">
         </p>
         <p>
-         <span class="js_link" onclick="javascript:checkvalue_str('value_defined_5', 'value_to_check_5', 'id_response');">Run script</span>
+         <span class="js_link" onclick="javascript:checkvalue_str('value_defined_5', 'value_to_check_5', 'id_response_5');">Run script</span>
         </p>
-        <div id="id_response"></div>
+        <div id="id_response_5"></div>
       </div>
-
 
       <div class="col_400">
-        <h1 class="col_header">6) Declare a function that takes a name as an argument and tells the user what name they've entered. Try running it after it has been declared.</h1>
+        <h2 class="col_header">6) Declare a function that takes a name as an argument and tells the user what name they've entered. Try running it after it has been declared.</h2>
+        <p>
+          Please enter your name: <input type="input" id="value_6" class="right" value="">
+        </p>
+        <p>
+         <span class="js_link" onclick="javascript:function_6('value_6', 'id_response_6');">Run script</span>
+        </p>
+        <div id="id_response_6"></div>
       </div>
-
 
       <div class="col_400">
-        <h1 class="col_header">7) Declare a function that takes no arguments but prints something to the console. Try running it after it has been declared.</h1>
+        <h2 class="col_header">7) Declare a function that takes no arguments but prints something to the console. Try running it after it has been declared.</h2>
+        <p>
+         <span class="js_link" onclick="javascript:function_7();">Click me!</span>
+        </p>
       </div>
-
 
       <div class="col_400">
-        <h1 class="col_header">8) Declare a function that depending upon which virtual 'door' was entered tells the user they've received a different 'prize' in an alert. After declaring the function, try running it with different options.</h1>
+        <h2 class="col_header">8) Declare a function that depending upon which virtual 'door' was entered tells the user they've received a different 'prize' in an alert. After declaring the function, try running it with different options.</h2>
+        <p>
+          Select a door  and click "Run script":           
+          <select id="door">
+            <option value="1" selected>Door #1</option>
+            <option value="2">Door #2</option>
+            <option value="3">Door #3</option>
+            <option value="4">Door #4</option>
+          </select>
+        </p>
+        <p>
+          <span class="js_link" onclick="javascript:door_supprise('door');">Run script</span>
+        </p>
+        <div id="id_response_8"></div>
       </div>
-
-
     </div>
-
-
 
   </body>
 </html>

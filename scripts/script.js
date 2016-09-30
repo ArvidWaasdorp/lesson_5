@@ -22,6 +22,7 @@ function add_simple_int()
   console.log(x1 + x2);
 }
 
+
 function add_simple_str()
 {
   var s1 = "Hello ";
@@ -104,20 +105,78 @@ function checkvalue_str(value_defined, value_entered, id_response)
 
 function calc (value1, value2, operator, outcome)
 {
+  var value = 0;
 
   switch (document.getElementById(operator).value)
   {
     case '*':
-      document.getElementById(outcome).value = Number(document.getElementById(value1).value) * Number(document.getElementById(value2).value);
+      value = Number(document.getElementById(value1).value) * Number(document.getElementById(value2).value);
       break;
     case '+':
-      document.getElementById(outcome).value = Number(document.getElementById(value1).value) + Number(document.getElementById(value2).value);
+      value = Number(document.getElementById(value1).value) + Number(document.getElementById(value2).value);
       break;
     case '-':
-      document.getElementById(outcome).value = Number(document.getElementById(value1).value) - Number(document.getElementById(value2).value);
+      value = Number(document.getElementById(value1).value) - Number(document.getElementById(value2).value);
       break;
     case '/':
-      document.getElementById(outcome).value = Number(document.getElementById(value1).value) / Number(document.getElementById(value2).value);
+      value = Number(document.getElementById(value1).value) / Number(document.getElementById(value2).value);
       break;
+  }
+
+  document.getElementById(outcome).value = value;
+
+}
+
+function function_6(value1, id_response)
+{
+  if (isNaN(document.getElementById(value1).value)) {
+
+  document.getElementById(id_response).innerHTML = "Welkom <span class=\"bold\">" + document.getElementById(value1).value + "</span>. How are you today?";
+
+  }
+  else
+  {
+  document.getElementById(id_response).innerHTML = "You have entered an incorrect value. Please enter your name.";
+
+  }
+
+}
+
+function function_7 ()
+{
+
+  var array = [
+                ['Hello Jenny'],
+                ['Good afternoon Nick'],
+                ['Homework of Tuesday September-27'],
+                ['A random string'],
+                ['Hello world!'],
+                ['Javascript is quite fun :)'],
+                ['Next stop JQuery']
+              ];
+
+
+  var x = Math.floor(Math.random() * array.length)
+
+  console.log(array[x]);
+}
+
+function door_supprise (door)
+{
+  if (document.getElementById(door).value === "1")
+  {
+    document.getElementById("id_response_8").innerHTML = "Hello world!";
+  } 
+  else if (document.getElementById(door).value === "2")
+  {
+    document.getElementById("id_response_8").innerHTML = "Open sesame";
+  }
+  else if (document.getElementById(door).value === "3")
+  {
+    document.getElementById("id_response_8").innerHTML = "The third else-if";
+  }
+  else
+  {
+    document.getElementById("id_response_8").innerHTML = "The last else statement";
   }
 }

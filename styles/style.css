@@ -2,17 +2,29 @@
   box-sizing: border-box;
 }
 
+body {
+   font-family: Verdana, "Times New Roman", Times, serif;
+}
+
 p {
-  font-family: Verdana, "Times New Roman", Times, serif;
   font-size: 0.9em;
   padding: 5px;
   line-height: 20px;
   text-align: left;
 }
 
+h1 {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  font-size: 2.0em;
+  text-align: center;
+
+}
+
 .js_link {
   text-decoration: none;
   cursor: pointer;
+  font-weight: bold;
 }
 
 .js_link:hover {
@@ -21,7 +33,6 @@ p {
 
 .wrapper {
   position: absolute;
-  top: 9em;
 
   font-family: Verdana, "Times New Roman", Times, serif;
   font-size: 0.85em;
@@ -35,7 +46,7 @@ p {
   display: inline-block;
   vertical-align: top;
 
-  border: 1px #b3b3b3 solid;
+  border: 1px solid #b3b3b3;
   background-color: #f2f2f2;
   border-radius: 5px;
   width: 400px;
@@ -58,4 +69,29 @@ p {
 
 .calc {
   width: 60px;
+}
+
+.calc_outcome {
+  width: 120px;
+}
+
+.bold {
+  font-style: italic;
+  font-weight: bold;
+}
+
+kbd {
+  background-color:#f7f7f7;
+  border:1px solid #ccc;
+  border-radius:3px;
+  box-shadow:0 1px 0px rgba(0,0,0,0.2),0 0 0 2px #fff inset;
+  color:#333;
+  display:inline-block;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:11px;
+  line-height:1.4;
+  margin:0 0.1em;
+  padding:0.1em 0.6em;
+  text-shadow:0 1px 0 #fff;
+  white-space:nowrap
 }
